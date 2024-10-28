@@ -6,13 +6,18 @@
 
 .calc {
   display: grid;
-
   justify-content: center;
-  /* align-items: center; */
   align-content: center;
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+}
+
+@media (max-width: 450px) {
+  .calc {
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+  }
 }
 
 button {
